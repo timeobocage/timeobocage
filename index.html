@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Développeur Freelance Caen | Expert Web & Applications - Normandie</title>
+    <meta name="description" content="Développeur freelance à Caen spécialisé en création de sites web, applications mobiles et solutions sur-mesure. Expertise React, Node.js, PHP. Intervention rapide en Normandie.">
+    <meta name="keywords" content="développeur freelance Caen, développeur web Caen, freelance informatique Caen, développeur Normandie, création site web Caen">
+    <meta name="author" content="Développeur Freelance Caen">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://votredomaine.fr">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Développeur Freelance Caen - Expert Web & Applications">
+    <meta property="og:description" content="Développeur freelance à Caen. Création de sites web, applications et solutions digitales sur-mesure.">
+    <meta property="og:url" content="https://votredomaine.fr">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Développeur Freelance Caen",
+        "image": "https://votredomaine.fr/logo.png",
+        "@id": "https://votredomaine.fr",
+        "url": "https://votredomaine.fr",
+        "telephone": "+33-6-XX-XX-XX-XX",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Caen",
+            "addressLocality": "Caen",
+            "postalCode": "14000",
+            "addressCountry": "FR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 49.1829,
+            "longitude": -0.3707
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/votre-profil",
+            "https://github.com/votre-profil"
+        ],
+        "priceRange": "€€",
+        "areaServed": {
+            "@type": "City",
+            "name": "Caen"
+        }
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2F80ED;
+            --accent: #2F80ED;
+            --text: #333333;
+            --text-light: #1a1a1a;
+            --bg: #F6F6F6;
+            --bg-light: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background: var(--bg);
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-light);
+        }
+        
+        /* Header / Hero */
+        header {
+            min-height: 100vh;
+            background: var(--bg-light);
+            color: var(--text-light);
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        h1 .highlight {
+            color: var(--accent);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            margin-bottom: 2rem;
+            color: var(--text);
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-bottom: 3rem;
+            color: var(--text);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            background: transparent;
+            border-radius: 8px;
+        }
+        
+        .btn:hover {
+            background: var(--accent);
+            color: white;
+        }
+        
+        /* Services Section */
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        #services {
+            background: var(--bg-light);
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text);
+            margin-bottom: 4rem;
+            font-size: 1.1rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border-left: 3px solid var(--accent);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .service-card:hover {
+            border-left-width: 3px;
+            box-shadow: 0 4px 16px rgba(47, 128, 237, 0.15);
+            transform: translateY(-4px);
+        }
+        
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        .service-card p {
+            color: var(--text);
+            line-height: 1.8;
+        }
+        
+        /* Technologies */
+        .tech-section {
+            background: var(--bg);
+            padding: 5rem 2rem;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+        }
+        
+        .tech-item {
+            padding: 1.5rem;
+            background: var(--bg-light);
+            transition: all 0.3s ease;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .tech-item:hover {
+            border-left: 3px solid var(--accent);
+            box-shadow: 0 4px 16px rgba(47, 128, 237, 0.15);
+        }
+        
+        .tech-item strong {
+            display: block;
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        .tech-item p {
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: var(--bg);
+            padding: 5rem 2rem;
+        }
+        
+        .contact-info {
+            max-width: 900px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .contact-item {
+            padding: 2rem;
+            background: var(--bg-light);
+            border-left: 3px solid var(--accent);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-item strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        .contact-item a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            color: var(--text-light);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--bg-light);
+            color: var(--text);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        /* Local SEO Section */
+        .local-seo {
+            background: var(--bg-light);
+            padding: 4rem 2rem;
+        }
+        
+        .local-text {
+            max-width: 800px;
+            margin: 2rem auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+            text-align: center;
+        }
+        
+        .local-text strong {
+            color: var(--text-light);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                text-align: center;
+            }
+            
+            .cta-buttons {
+                justify-content: center;
+            }
+            
+            .section {
+                padding: 4rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero / Header -->
+    <header>
+        <div class="hero-content">
+            <h1>
+                <span class="highlight">Développeur Freelance</span><br>
+                à Caen
+            </h1>
+            <p class="hero-subtitle">
+                Expert en développement web & applications sur-mesure
+            </p>
+            <p class="hero-description">
+                Je transforme vos idées en solutions digitales performantes. 
+                Basé à Caen, j'accompagne les entreprises et startups de Normandie dans leur 
+                transformation numérique avec des technologies modernes et éprouvées.
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn">Me contacter</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <h2 class="section-title">Services de développement</h2>
+        <p class="section-subtitle">
+            Solutions complètes pour vos projets digitaux en Normandie
+        </p>
+        
+        <div class="services-grid">
+            <article class="service-card">
+                <h3>Sites Web & E-commerce</h3>
+                <p>
+                    Création de sites vitrines, e-commerce et applications web sur-mesure. 
+                    Design moderne, responsive et optimisé SEO pour votre visibilité à Caen et au-delà.
+                </p>
+            </article>
+            
+            <article class="service-card">
+                <h3>Applications Mobiles</h3>
+                <p>
+                    Développement d'applications iOS et Android performantes. 
+                    Solutions hybrides React Native ou natives selon vos besoins spécifiques.
+                </p>
+            </article>
+            
+            <article class="service-card">
+                <h3>Solutions Backend & API</h3>
+                <p>
+                    Architecture serveur robuste, API RESTful et GraphQL, bases de données optimisées. 
+                    Solutions scalables et sécurisées pour votre infrastructure.
+                </p>
+            </article>
+            
+            <article class="service-card">
+                <h3>UI/UX Design</h3>
+                <p>
+                    Conception d'interfaces intuitives et attractives. 
+                    Prototypage, wireframing et design system pour une expérience utilisateur optimale.
+                </p>
+            </article>
+            
+            <article class="service-card">
+                <h3>Maintenance & Support</h3>
+                <p>
+                    Support technique, mise à jour, debugging et amélioration continue. 
+                    Intervention rapide sur Caen et télétravail pour vos urgences.
+                </p>
+            </article>
+            
+            <article class="service-card">
+                <h3>Consulting & Formation</h3>
+                <p>
+                    Audit de code, conseil en architecture, formation de vos équipes. 
+                    Accompagnement stratégique pour vos projets digitaux en Normandie.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="tech-section">
+        <div class="section">
+            <h2 class="section-title">Technologies maîtrisées</h2>
+            <p class="section-subtitle">
+                Stack technique moderne et éprouvée
+            </p>
+            
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <strong>Frontend</strong>
+                    <p>React, Vue.js, Angular, Next.js, TypeScript</p>
+                </div>
+                <div class="tech-item">
+                    <strong>Backend</strong>
+                    <p>Node.js, PHP, Python, Express, Laravel</p>
+                </div>
+                <div class="tech-item">
+                    <strong>Mobile</strong>
+                    <p>React Native, Flutter, Swift, Kotlin</p>
+                </div>
+                <div class="tech-item">
+                    <strong>Databases</strong>
+                    <p>PostgreSQL, MySQL, MongoDB, Redis</p>
+                </div>
+                <div class="tech-item">
+                    <strong>DevOps</strong>
+                    <p>Docker, AWS, Azure, CI/CD, Git</p>
+                </div>
+                <div class="tech-item">
+                    <strong>CMS</strong>
+                    <p>WordPress, Shopify, Strapi, Contentful</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local SEO Section -->
+    <section class="local-seo">
+        <div class="section">
+            <h2 class="section-title">Développeur freelance basé à Caen, Normandie</h2>
+            <p class="local-text">
+                En tant que <strong>développeur freelance à Caen</strong>, j'interviens rapidement 
+                dans toute la région normande : Hérouville-Saint-Clair, Mondeville, Ifs, Bayeux, 
+                Lisieux et le Calvados. Disponible en présentiel pour les entreprises caennaises 
+                et en remote pour vos projets partout en France.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section">
+            <h2 class="section-title">Me contacter</h2>
+            <p class="section-subtitle">
+                Discutons de votre projet
+            </p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    <p><a href="/cdn-cgi/l/email-protection#a1c2cecfd5c0c2d5e1d7ced5d3c48cc4ccc0c8cd8fc7d3"><span class="__cf_email__" data-cfemail="f4979b9a80959780b4829b808691d99199959d98da9286">[email&#160;protected]</span></a></p>
+                </div>
+                
+                <div class="contact-item">
+                    <strong>Téléphone</strong>
+                    <p><a href="tel:+33600000000">06 XX XX XX XX</a></p>
+                </div>
+                
+                <div class="contact-item">
+                    <strong>LinkedIn</strong>
+                    <p><a href="https://linkedin.com/in/votre-profil" target="_blank">Voir mon profil</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Développeur Freelance Caen</p>
+        <p style="margin-t
