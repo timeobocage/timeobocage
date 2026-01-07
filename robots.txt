@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://timeobocage.github.io/timeobocage/sitemap.xml
+
+# Directives pour optimiser le crawl
+Crawl-delay: 1
+
+# Bloquer les fichiers non nécessaires
+Disallow: *.git*
+Disallow: /README.md
