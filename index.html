@@ -301,36 +301,91 @@
         
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
             margin: 3rem auto 0;
         }
         
         .tech-item {
-            padding: 1.5rem;
-            background: var(--bg-light);
-            transition: all 0.3s ease;
+            position: relative;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(135deg, var(--bg-light) 0%, #f8f9ff 100%);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             text-align: center;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border: 2px solid transparent;
+            overflow: hidden;
+        }
+        
+        .tech-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), #4a90e2, #2196f3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
         
         .tech-item:hover {
-            border-left: 3px solid var(--accent);
-            box-shadow: 0 4px 16px rgba(47, 128, 237, 0.15);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(47, 128, 237, 0.15);
+            border-color: var(--accent);
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+        }
+        
+        .tech-item:hover::before {
+            opacity: 1;
         }
         
         .tech-item strong {
             display: block;
-            font-size: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
             color: var(--text-light);
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .tech-item strong::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-item:hover strong::after {
+            opacity: 1;
+            width: 50px;
+        }
+        
+        .tech-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .tech-item:hover .tech-icon {
+            transform: scale(1.1) rotate(5deg);
         }
         
         .tech-item p {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: var(--text);
+            line-height: 1.6;
+            font-weight: 400;
         }
         
         /* Contact Section */
@@ -428,6 +483,24 @@
             
             .tech-main-image {
                 max-width: 300px;
+            }
+            
+            .tech-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .tech-item {
+                padding: 2rem 1.5rem;
+            }
+            
+            .tech-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .tech-item {
+                padding: 2rem 1.5rem;
             }
         }
     </style>
@@ -537,26 +610,32 @@
             
             <div class="tech-grid">
                 <div class="tech-item">
+                    <div class="tech-icon">💻</div>
                     <strong>Frontend</strong>
                     <p>React, Vue.js, Angular, Next.js, TypeScript</p>
                 </div>
                 <div class="tech-item">
+                    <div class="tech-icon">⚙️</div>
                     <strong>Backend</strong>
                     <p>Node.js, PHP, Python, Express, Laravel</p>
                 </div>
                 <div class="tech-item">
+                    <div class="tech-icon">📱</div>
                     <strong>Mobile</strong>
                     <p>React Native, Flutter, Swift, Kotlin</p>
                 </div>
                 <div class="tech-item">
+                    <div class="tech-icon">🗄️</div>
                     <strong>Databases</strong>
                     <p>PostgreSQL, MySQL, MongoDB, Redis</p>
                 </div>
                 <div class="tech-item">
+                    <div class="tech-icon">☁️</div>
                     <strong>DevOps</strong>
                     <p>Docker, AWS, Azure, CI/CD, Git</p>
                 </div>
                 <div class="tech-item">
+                    <div class="tech-icon">🔧</div>
                     <strong>CMS</strong>
                     <p>WordPress, Shopify, Strapi, Contentful</p>
                 </div>
