@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Développeur Freelance Caen - Timeo Bocage | Expert Web & Applications - Normandie</title>
-    <meta name="description" content="Développeur freelance Caen spécialisé en création de sites web modernes, applications mobiles et solutions digitales sur-mesure. Timeo Bocage, expertise React, Node.js, PHP. Intervention rapide en Normandie.">
-    <meta name="keywords" content="développeur freelance Caen, développeur web Caen, freelance informatique Caen, développeur Normandie, création site web Caen, développeur react caen, développeur php caen, développeur mobile caen, Timeo Bocage">
-    <meta name="author" content="Timeo Bocage - Développeur Freelance Caen">
+    <title>Développeur Freelance Caen | Expert Web & Applications Mobile - Normandie</title>
+    <meta name="description" content="Développeur freelance Caen expert en création de sites web modernes, applications mobiles et e-commerce. Spécialisé React, Node.js, PHP. Développeur freelance Caen disponible immédiatement pour vos projets en Normandie.">
+    <meta name="keywords" content="développeur freelance Caen, développeur web Caen, freelance informatique Caen, développeur Normandie, création site web Caen, développeur react caen, développeur php caen, développeur mobile caen, développeur ecommerce caen, freelance caen, prestataire informatique caen">
+    <meta name="author" content="Développeur Freelance Caen - Expert Web & Mobile">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta name="googlebot" content="index, follow">
     <meta name="bingbot" content="index, follow">
@@ -29,13 +29,18 @@
     <meta name="coverage" content="Worldwide">
     <meta name="distribution" content="Global">
     <meta name="rating" content="General">
+    <meta name="city" content="Caen">
+    <meta name="country" content="France">
+    <meta name="language" content="French">
+    <meta name="audience" content="Entreprises Caen, PME Normandie">
+    <meta name="category" content="Développement Web, Applications Mobiles, E-commerce">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Timéboc - Développeur Freelance Caen | Expert Web & Applications">
-    <meta property="og:description" content="Développeur freelance expert à Caen. Création de sites web modernes, applications mobiles et solutions digitales sur-mesure. Intervention rapide en Normandie.">
+    <meta property="og:title" content="Développeur Freelance Caen | Expert Web & Applications Mobile">
+    <meta property="og:description" content="Développeur freelance Caen expert en sites web modernes, applications mobiles et e-commerce. Spécialiste React, Node.js, PHP. Disponible immédiatement en Normandie.">
     <meta property="og:url" content="https://timeobocage.github.io/timeobocage/">
-    <meta property="og:site_name" content="Timéboc - Développeur Freelance Caen">
+    <meta property="og:site_name" content="Développeur Freelance Caen - Expert Web & Mobile">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:image" content="https://timeobocage.github.io/timeobocage/images/developer-caen-og.jpg">
     <meta property="og:image:width" content="1200">
@@ -44,7 +49,7 @@
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Timéboc - Développeur Freelance Caen">
+    <meta name="twitter:title" content="Développeur Freelance Caen | Expert Web & Applications">
     <meta name="twitter:description" content="Expert en développement web & applications à Caen. Solutions modernes et performantes.">
     <meta name="twitter:image" content="https://timeobocage.github.io/timeobocage/images/developer-caen-og.jpg">
     <meta name="twitter:image:alt" content="Développeur freelance Caen">
@@ -68,17 +73,21 @@
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Développeur Freelance Caen",
-        "image": "https://votredomaine.fr/logo.png",
-        "@id": "https://votredomaine.fr",
-        "url": "https://votredomaine.fr",
-        "telephone": "+33-XX-XX-XX-XX-XX",
+        "name": "Développeur Freelance Caen - Expert Web & Applications",
+        "description": "Développeur freelance Caen spécialisé en création de sites web, applications mobiles et e-commerce. Expert React, Node.js, PHP.",
+        "@id": "https://timeobocage.github.io/timeobocage/",
+        "url": "https://timeobocage.github.io/timeobocage/",
+        "telephone": "Sur demande",
+        "priceRange": "€€",
+        "servedCuisine": [],
+        "knowsAbout": ["Développement Web", "Applications Mobiles", "React", "Node.js", "PHP", "E-commerce", "SEO"],
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Caen",
             "addressLocality": "Caen",
             "postalCode": "14000",
-            "addressCountry": "FR"
+            "addressCountry": "FR",
+            "addressRegion": "Normandie"
         },
         "geo": {
             "@type": "GeoCoordinates",
@@ -143,6 +152,7 @@
             line-height: 1.7;
             overflow-x: hidden;
             background: var(--bg-light);
+            padding-top: 70px; /* Espace pour le header fixe */
         }
         
         h1, h2, h3 {
@@ -150,6 +160,131 @@
             font-weight: 700;
             line-height: 1.2;
             color: var(--text-light);
+        }
+        
+        /* Header Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 0.75rem 2rem;
+            transition: var(--transition);
+        }
+        
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 2rem;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary);
+            background: var(--accent-light);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 80%;
+        }
+        
+        .nav-cta {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .nav-cta::after {
+            content: '→';
+        }
+        
+        /* Mobile Menu */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+            background: none;
+            border: none;
+        }
+        
+        .nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-light);
+            margin: 2px 0;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+        
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
         }
         
         /* Header / Hero - Design moderne avec gradient */
@@ -783,65 +918,61 @@
         }
         
         @media (max-width: 768px) {
-            .section {
-                padding: 4rem 1rem;
+            .navbar {
+                padding: 0.75rem 1rem;
             }
             
-            .hero-content {
-                text-align: center;
-            }
-            
-            .cta-buttons {
-                justify-content: center;
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
                 flex-direction: column;
-                align-items: center;
+                gap: 0;
+                padding: 1rem 0;
+                border-bottom: 1px solid var(--border);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
             }
             
-            .btn {
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-item {
                 width: 100%;
-                max-width: 280px;
-            }
-            
-            .tech-header {
-                grid-template-columns: 1fr;
-                gap: 2rem;
                 text-align: center;
+                border-bottom: 1px solid var(--border);
             }
             
-            .tech-content .section-title,
-            .tech-content .section-subtitle {
-                text-align: center;
+            .nav-item:last-child {
+                border-bottom: none;
             }
             
-            .tech-main-image {
-                max-width: 280px;
+            .nav-link {
+                display: block;
+                padding: 1rem 2rem;
+                border-radius: 0;
             }
             
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
+            .nav-cta {
+                margin: 1rem 2rem;
+                justify-content: center;
             }
             
-            .service-card {
-                padding: 2rem 1.5rem;
+            .nav-toggle {
+                display: flex;
             }
             
-            .tech-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .tech-item {
-                padding: 2rem 1.5rem;
-            }
-            
-            .contact-cards {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .contact-card {
-                padding: 2.5rem 1.5rem;
+            header {
+                padding: 1rem;
+                min-height: 90vh;
             }
         }
         
@@ -881,20 +1012,48 @@
     </style>
 </head>
 <body>
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#technologies" class="nav-link">Technologies</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-cta">Démarrer un projet</a>
+                </li>
+            </ul>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
     <!-- Hero / Header -->
     <header>
         <div class="hero-content">
             <h1>
-                Salut, je suis <span class="highlight">Timeo Bocage</span><br>
-                <strong>Développeur Freelance à Caen</strong>
+                <strong>Développeur Freelance Caen</strong><br>
+                <span class="highlight">Expert Web & Applications Mobile</span>
             </h1>
             <p class="hero-subtitle">
-                Je crée des expériences digitales modernes et performantes
+                Votre <strong>développeur freelance Caen</strong> pour des solutions digitales sur-mesure
             </p>
             <p class="hero-description">
-                <strong>Développeur freelance à Caen</strong> passionné par le développement web et mobile, je transforme vos idées en solutions digitales innovantes. 
-                Basé en Normandie, j'accompagne les entreprises locales avec des technologies de pointe 
-                et une approche centrée sur l'utilisateur. Votre <strong>développeur freelance Caen</strong> de confiance.
+                <strong>Développeur freelance Caen</strong> spécialisé en création de sites web, applications mobiles et e-commerce. 
+                Basé en Normandie, j'accompagne les entreprises de Caen et sa région avec des technologies modernes : React, Node.js, PHP. 
+                Votre <strong>développeur freelance Caen</strong> disponible pour transformer vos projets en solutions digitales performantes.
             </p>
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">Démarrer un projet</a>
@@ -905,9 +1064,9 @@
 
     <!-- Services Section -->
     <section id="services" class="section">
-        <h2 class="section-title gradient">Mes Services</h2>
+        <h2 class="section-title gradient">Services Développeur Freelance Caen</h2>
         <p class="section-subtitle">
-            Solutions digitales complètes pour donner vie à vos projets les plus ambitieux
+            <strong>Développeur freelance Caen</strong> expert en solutions digitales pour entreprises normandes
         </p>
         
         <div class="services-grid">
@@ -968,7 +1127,7 @@
     </section>
 
     <!-- Technologies Section -->
-    <section class="tech-section">
+    <section id="technologies" class="tech-section">
         <div class="section">
             <div class="tech-header">
                 <div class="tech-content">
@@ -1042,9 +1201,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="section">
-            <h2 class="section-title gradient">Travaillons Ensemble</h2>
+            <h2 class="section-title gradient">Contactez Votre Développeur Freelance Caen</h2>
             <p class="section-subtitle">
-                Vous avez un projet en tête ? Contactez-moi par votre moyen préféré !
+                <strong>Développeur freelance Caen</strong> disponible pour vos projets. Contact rapide et devis gratuit !
             </p>
             
             <div class="contact-cards">
@@ -1092,5 +1251,68 @@
         <p>&copy; 2025 Timeo Bocage - Développeur Freelance Caen</p>
         <p style="margin-top: 0.5rem;">Développement web et mobile professionnel à Caen et en Normandie</p>
     </footer>
+    
+    <!-- JavaScript pour navigation -->
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const navbar = document.getElementById('navbar');
+        
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Smooth scrolling pour les liens de navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 70; // Hauteur du header
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Fermer le menu mobile si ouvert
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+        
+        // Effet scroll sur le navbar
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Active link selon la section visible
+        const sections = document.querySelectorAll('section[id], header');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id') || 'home';
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href === `#${current}` || (current === 'home' && href === '#')) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
