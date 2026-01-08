@@ -403,22 +403,11 @@
             line-height: 1.6;
         }
 
-        /* Services Section - Design bento box premium */
+        /* Services Section - Design premium */
         #services {
             background: #ffffff;
             position: relative;
-            overflow: hidden;
-        }
-        
-        #services::before {
-            display: none;
-        }
-        
-        #services::after {
-            display: none;
-        }
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            padding: 6rem 0;
         }
         
         .services-grid {
@@ -444,11 +433,10 @@
             background: #ffffff;
             padding: 2.5rem;
             position: relative;
-            border-radius: var(--radius-lg);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            transition: var(--transition);
+            border-radius: 20px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
         }
         
         .service-card::before {
@@ -457,53 +445,68 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 50%, #60a5fa 100%);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.02) 0%, rgba(59, 130, 246, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
         
         .service-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px rgba(37, 99, 235, 0.12);
-            border-color: rgba(37, 99, 235, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+            border-color: rgba(37, 99, 235, 0.2);
         }
         
         .service-card:hover::before {
-            transform: scaleX(1);
+            opacity: 1;
         }
         
         .service-card .service-icon {
-            width: 72px;
-            height: 72px;
-            background: linear-gradient(135deg, var(--accent-light), rgba(59, 130, 246, 0.12));
-            border-radius: 18px;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
-            font-size: 2rem;
-            transition: var(--transition);
-            color: var(--primary);
+            font-size: 1.75rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
         }
         
         .service-card:hover .service-icon {
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            color: white;
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+            background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%);
+            transform: scale(1.1);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
+        }
+        
+        .service-card:hover .service-icon::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            background: linear-gradient(135deg, var(--primary), #60a5fa);
+            border-radius: 20px;
+            z-index: -1;
+            opacity: 0.2;
         }
 
         .service-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
             color: var(--text-light);
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
         }
         
         .service-card p {
-            color: var(--text);
-            line-height: 1.8;
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 1;
         }
         
         /* Services Section */
