@@ -403,24 +403,18 @@
             line-height: 1.6;
         }
 
-        /* Services Section - Design ultra premium */
+        /* Services Section - Design moderne */
         #services {
-            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%);
+            background: #ffffff;
             position: relative;
-            padding: 7rem 0;
+            padding: 6rem 0;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 4rem;
-        }
-        
-        @media (max-width: 1024px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            margin-top: 3.5rem;
         }
         
         @media (max-width: 768px) {
@@ -430,62 +424,59 @@
         }
         
         .service-card {
-            background: #ffffff;
-            padding: 2rem 1.75rem;
+            background: #f9fafb;
+            padding: 1.75rem 2rem;
             position: relative;
-            border-radius: 16px;
-            border: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
         }
         
         .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(37, 99, 235, 0.08);
+            background: #ffffff;
+            border-color: #d1d5db;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
         }
         
         .service-card .service-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--primary);
-            border-radius: 12px;
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            background: #ffffff;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.25rem;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+            border: 1px solid #e5e7eb;
         }
         
-        .service-card:nth-child(1) .service-icon { background: #dbeafe; }
-        .service-card:nth-child(2) .service-icon { background: #ede9fe; }
-        .service-card:nth-child(3) .service-icon { background: #d1fae5; }
-        .service-card:nth-child(4) .service-icon { background: #fef3c7; }
-        .service-card:nth-child(5) .service-icon { background: #fee2e2; }
-        .service-card:nth-child(6) .service-icon { background: #cffafe; }
+        .service-card-content {
+            flex: 1;
+        }
 
         .service-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-light);
+            font-size: 1.05rem;
+            margin-bottom: 0.35rem;
+            color: #111827;
             font-weight: 600;
         }
         
         .service-card p {
             color: #6b7280;
-            line-height: 1.6;
+            line-height: 1.55;
             font-size: 0.9rem;
             margin: 0;
         }
         
-        /* Services Section */
+        /* Section générale */
         .section {
             padding: 6rem 2rem;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-        }
-        
-        #services {
-            background: var(--bg-light);
         }
         
         .section-title {
@@ -1642,50 +1633,50 @@
         <div class="services-grid">
             <article class="service-card">
                 <div class="service-icon">🌐</div>
-                <h3>Sites Web Modernes</h3>
-                <p>
-                    Création de sites web sur-mesure avec React et Next.js. Design responsive, performances optimisées et référencement intégré pour maximiser votre visibilité en ligne.
-                </p>
+                <div class="service-card-content">
+                    <h3>Sites Web Modernes</h3>
+                    <p>Création de sites sur-mesure avec React et Next.js. Design responsive et SEO intégré.</p>
+                </div>
             </article>
             
             <article class="service-card">
                 <div class="service-icon">📱</div>
-                <h3>Applications Mobiles</h3>
-                <p>
-                    Développement d'applications iOS et Android avec React Native. Des solutions performantes pour toucher tous vos utilisateurs sur mobile.
-                </p>
+                <div class="service-card-content">
+                    <h3>Applications Mobiles</h3>
+                    <p>Applications iOS et Android avec React Native. Solutions performantes et cross-platform.</p>
+                </div>
             </article>
             
             <article class="service-card">
                 <div class="service-icon">🛒</div>
-                <h3>E-commerce</h3>
-                <p>
-                    Boutiques en ligne optimisées avec Shopify, WooCommerce ou solutions personnalisées. Paiements sécurisés et gestion simplifiée pour développer vos ventes.
-                </p>
+                <div class="service-card-content">
+                    <h3>E-commerce</h3>
+                    <p>Boutiques en ligne avec Shopify ou WooCommerce. Paiements sécurisés et gestion simplifiée.</p>
+                </div>
             </article>
             
             <article class="service-card">
                 <div class="service-icon">⚙️</div>
-                <h3>Solutions Backend</h3>
-                <p>
-                    APIs robustes et architectures cloud avec Node.js et PHP. Des solutions évolutives et sécurisées pour accompagner la croissance de votre entreprise.
-                </p>
+                <div class="service-card-content">
+                    <h3>Solutions Backend</h3>
+                    <p>APIs robustes avec Node.js et PHP. Architectures évolutives et sécurisées.</p>
+                </div>
             </article>
             
             <article class="service-card">
                 <div class="service-icon">🎨</div>
-                <h3>UI/UX Design</h3>
-                <p>
-                    Conception d'interfaces modernes et intuitives. Prototypage et expérience utilisateur optimisée pour convertir vos visiteurs en clients.
-                </p>
+                <div class="service-card-content">
+                    <h3>UI/UX Design</h3>
+                    <p>Interfaces modernes et intuitives. Expérience utilisateur optimisée pour convertir.</p>
+                </div>
             </article>
             
             <article class="service-card">
                 <div class="service-icon">🚀</div>
-                <h3>Conseil & Optimisation</h3>
-                <p>
-                    Audit technique, optimisation des performances et accompagnement stratégique. Je vous aide à faire les bons choix technologiques pour vos projets.
-                </p>
+                <div class="service-card-content">
+                    <h3>Conseil & Optimisation</h3>
+                    <p>Audit technique et accompagnement stratégique pour vos projets digitaux.</p>
+                </div>
             </article>
         </div>
     </section>
