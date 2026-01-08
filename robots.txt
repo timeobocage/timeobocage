@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://timeobocage.github.io/timeobocage/sitemap.xml
+Sitemap: https://timeobocage.vercel.app/sitemap.xml
 
 # Directives pour optimiser le crawl
 Crawl-delay: 1
